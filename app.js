@@ -22,6 +22,8 @@ app.use(session({
   cookie: {
     maxAge: 14 * 24 * 60 * 60 * 1000  // Cookie expiration time (in milliseconds)
   }
+
+  
 }));
 //check if user is logged in function before completing the route
 function ensureAuthenticated(req, res, next) {
