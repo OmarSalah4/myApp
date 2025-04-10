@@ -360,6 +360,8 @@ app.post('/search', async (req, res) => {
     return res.render('searchResults', { searchResults: [], error: 'Please enter a search term' });
   }
 
+  
+
   try {
     const sanitizedKeyword = keyword.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, '\\$&');
     const destinations = await db.collection('myCollection').find({
